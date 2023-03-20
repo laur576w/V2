@@ -35,7 +35,8 @@ main
 {
     background-color: hsl(209, 20%, 80%);
     padding: 1rem;
-    max-width: 800px;
+    flex-grow: 1;
+
 }
 
 aside
@@ -78,9 +79,7 @@ article {
         width: 100%;
         height: 80px;
     }
-    main {
-        flex-grow: 1;
-    }
+    
     
 
     
@@ -88,15 +87,16 @@ article {
 
 @media only screen and (min-width:601px) {
     aside, nav{
-        width: calc(1/6*100vw);
+        flex-basis: calc(1/6*100vh);
         height: calc(4/6*100vh);
+        flex-grow: 1;
     }
 
     header, footer {
         height: calc(1/6*100vh);
     }
     main {
-        width: calc(3/6*100vw);
+        flex-basis: 50%;
     }
     
 }
