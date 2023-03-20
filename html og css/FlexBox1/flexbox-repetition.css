@@ -12,7 +12,7 @@ body
     flex-wrap: wrap;
     overflow-x: hidden;
 }
-body > *:not(main) {
+body > *:not(main, script) {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -63,6 +63,7 @@ h2, h3 {
 article {
     margin: 1rem 0;
 }
+
 
 
 
