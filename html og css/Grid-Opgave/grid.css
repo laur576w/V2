@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    color: hsl(209, 10%, 100%);
+}
+
+header
+{
+    background-color: hsl(209, 50%, 30%);
+    grid-area: header;
+}
+
+nav
+{
+    background-color: hsl(209, 30%, 60%);
+    grid-area: nav;
+}
+
+main
+{
+    background-color: hsl(209, 20%, 80%);
+    grid-area: main;
+    padding: 1rem;
+}
+
+aside
+{
+    background-color: hsl(209, 80%, 50%);
+}
+
+aside:first-child {
+    grid-area: aside1;
+}
+
+aside:last-child {
+    grid-area: aside2;
+}
+
+footer
+{
+    background-color: hsl(209, 50%, 30%);
+    grid-area: footer;
+}
+h2,h3 {
+    text-align: center;
+}
+main > section {
+    display: grid;
+    grid-gap: 30px;
+}
+
+.griditem {
+    display: grid;
+    align-content: center;
+}
+
+@media only screen and (max-width:900px) {
+    
+    
+    body {
+        grid-template-areas: 
+        'header'
+        'nav'
+        'main'
+        'footer';
+        grid-template-rows: 80px 80px 1fr 80px ;
+        
+    }
+    
+    
+
+    aside {
+        display: none!important;
+    }
+}
+
+@media only screen and (min-width:901px) {
+    body {
+        grid-template-areas:
+        'header header header header header header'
+        'aside1 nav main main main aside2'
+        'footer footer footer footer footer footer';
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr 4fr 1fr;
+    }
+}
