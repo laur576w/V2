@@ -10,7 +10,8 @@
 
 body
 {
-    width: 1200px;
+    min-height:100vh;
+    max-width: 1200px;
     margin: 0 auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -20,7 +21,7 @@ body
 header
 {
     background-color: #CCCCCC;
-    height: 100px;
+    min-height: 100px;
 }
 
     
@@ -144,7 +145,7 @@ h2
     
     body
     {
-        width: 1300px;
+        max-width: 1300px;
         margin: 0 auto;
     }
 
@@ -172,4 +173,62 @@ h2
     {
         display: none;
     }
+}
+
+/*----------------------------------*/
+/*----------- My Code --------------*/
+/*----------------------------------*/
+
+body {
+    display: grid;
+}
+
+@media only screen and (max-width:899px) {
+    body {
+        grid-template-columns: 1fr 100px 100px;
+        grid-template-rows: auto;
+    }
+    header {
+        height: auto;
+    }
+    li:nth-child(3), li:nth-child(8) {
+        grid-column: span 2;
+    }
+
+    nav:before {
+        content: 'Læs mere:';
+        font-weight: 500;
+    }
+
+    nav {
+        grid-row: 9;
+    }
+    
+    nav, header, article, footer {
+        grid-column: span 3;
+    }
+}
+
+@media only screen and (min-width:900px) {
+    body {
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: 100px 40px 1fr 1fr 40px;
+    }
+    header {
+        grid-column: 1 / span 7;
+    }
+    article {
+        grid-column: span 3;
+    }
+
+    nav {
+       grid-row: span 2; 
+    }
+
+    footer {
+        grid-column: 1 / span 7;
+    }
+    /*article:nth-child(2n+2) {
+        grid-column: 2 / span 3;
+    }*/
 }
