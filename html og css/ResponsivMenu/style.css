@@ -87,6 +87,40 @@ nav .menu-btn ~ .closeicon
     display: none;
 }
 
+@media only screen and (max-width: 767px) {
+    
+
+    nav .menu-btn:checked ~ul {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 2;
+    }
+
+    nav ul li {
+    }
+
+    nav .menu-btn:checked ~ ul li:first-child {
+        margin-top: 50px;
+    }
+
+    nav .menu-btn:checked ~ ul li {
+        background-color: #6a6a6a;
+    }
+
+    nav .menu-btn:checked ~ ul li:not(:last-child) {
+        border-bottom: #808080 3px solid;
+    }
+
+    nav .menu-btn:checked ~ .closeicon {
+        display: block;
+    }
+
+    nav .menu-btn:checked ~ .menuicon {
+        display: none;
+    }
+}
+
 /* Særlig styling til desktop - minimum viewport bredde på 768 pixels */
 
 @media only screen and (min-width: 768px)
@@ -118,10 +152,7 @@ nav .menu-btn ~ .closeicon
         padding: 0;
     }
 
-    nav ul li a
-    {
-        color: gainsboro;
-    }
+    
 
     nav ul li:hover a
     {
@@ -129,3 +160,28 @@ nav .menu-btn ~ .closeicon
     }
 }
 
+/*-------------------------*/
+/*-------------------------*/
+/*------- ERROR start------*/
+/*-------------------------*/
+/*-------------------------*/
+
+
+/*Findes kun i desktop @media only screen and (min-width: 768px)*/
+nav ul li a
+{
+    color: gainsboro;
+}
+
+/*------------- Lille fejl ----------------*/
+/* Krysdset er ikke i hamburger's centrum  */
+.closeicon {
+    right: 14px;
+}
+
+
+/*-------------------------*/
+/*-------------------------*/
+/*------- ERROR end--------*/
+/*-------------------------*/
+/*-------------------------*/
