@@ -97,9 +97,6 @@ nav .menu-btn ~ .closeicon
         z-index: 2;
     }
 
-    nav ul li {
-    }
-
     nav .menu-btn:checked ~ ul li:first-child {
         margin-top: 50px;
     }
