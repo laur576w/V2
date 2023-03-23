@@ -96,16 +96,16 @@ nav>img
 }
 
 /* Hamburger menu ikonen vises som default */
-nav .menu-btn ~ .menuicon
+/* nav .menu-btn ~ .menuicon
 {
-    /* display: block; */
-}
+     display: block; 
+} */
 
 /* Lukke ikonet til menuen skjules som default */
-nav .menu-btn ~ .closeicon
+/* nav .menu-btn ~ .closeicon
 {
-    /* display: none; */
-}
+     display: none; 
+} */
 
 /* Pil nederst i højre hjørne, som altid kan føre brugeren til toppen. Dette styler den hvide cirkel bag pilen */
 main>span
