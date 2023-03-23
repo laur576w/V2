@@ -98,13 +98,13 @@ nav>img
 /* Hamburger menu ikonen vises som default */
 nav .menu-btn ~ .menuicon
 {
-    display: block;
+    /* display: block; */
 }
 
 /* Lukke ikonet til menuen skjules som default */
 nav .menu-btn ~ .closeicon
 {
-    display: none;
+    /* display: none; */
 }
 
 /* Pil nederst i højre hjørne, som altid kan føre brugeren til toppen. Dette styler den hvide cirkel bag pilen */
@@ -127,6 +127,169 @@ main>span img
 {
     width: 30px;
 }
+
+/* mobile undermenu */
+@media only screen and (max-width: 767px) {
+    nav a {
+        color: gainsboro;
+    }
+
+    .closeicon {
+        height: 0;
+        width: 0;
+        transition: 1s, opacity 0.5s;
+        opacity: 0;
+    }
+
+    .menuicon {
+        transition: 1s, opacity 0.5s;
+        height: 40px;
+        width: 40px;
+    }
+
+    nav .menu-btn:checked ~ .menuicon {
+        /* display: none; */
+        height: 0;
+        width: 0;
+        opacity: 0;
+    }
+    nav .menu-btn:checked ~ .closeicon {
+        /* display: block; */
+        height: 40px;
+        width: 40px;
+        opacity: 1;
+    }
+
+    nav .menu-btn:checked ~ ul img {
+        width: 40px;
+    }
+
+    nav .menu-btn:checked ~ ul {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        animation: dropdown 0.3s;
+    }
+
+    nav .menu-btn:checked ~ ul > li:first-child {
+        margin-top: 50px;
+    }
+
+    nav .menu-btn:checked ~ ul > li {
+        background: #747474;
+        
+        position: relative;
+    }
+
+    nav .menu-btn:checked ~ ul > li:not(:last-child) {
+        border-bottom: 1px solid;
+    }
+
+
+    nav .menu-btn:checked ~ul li .submenu-btn:checked ~ ul {
+        display: block;
+        background-color: #5f5f5f;
+        animation: dropdown 0.5s;
+
+    }
+
+    nav .menu-btn:checked ~ul li .submenu-btn:checked ~ul li {
+        padding-left: 7%;
+
+    }
+
+    nav .menu-btn:checked ~ul li .submenu-btn:checked ~ul li:not(:last-child) {
+        border-bottom: 1px solid grey;
+    }
+
+    nav .menu-btn:checked ~ul li .submenu-btn:checked ~ul li:first-child {
+        border-top: 1px solid grey;
+    }
+
+    nav .menu-btn:checked ~ul li .submenu-btn,
+    nav .menu-btn:checked ~ul li img {
+    height: 40px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    }
+
+    nav .menu-btn:checked ~ul li .submenu-btn {
+        display: block;
+    width: 40px;
+    z-index: 7;
+    opacity: 0;
+    cursor: pointer;
+    }
+
+    nav .menu-btn:checked ~ul li .submenu-btn ~ img{
+        /* animation: 1s cb-pop; */
+        transition: 1s;
+
+    }
+
+    nav .menu-btn:checked ~ul li .submenu-btn:checked ~ img {
+        transform: rotate(180deg);
+
+    }
+
+    @keyframes dropdown {
+        0% {
+            opacity: 0; 
+            max-height:0;
+            transition: 1s;
+        }
+        15% {
+            opacity: 0.15; 
+            max-height:30%;
+            transition: 1s;
+        }
+        30% {
+            opacity: 0.3; 
+            max-height:50%;
+            transition: 1s;
+        }
+        45% {
+            opacity: 0.45; 
+            max-height:80%;
+            transition: 1s;
+        }
+        60% {
+            opacity: 0.60; 
+            max-height:100%;
+            transition: 1s;
+        }
+        75% {
+            opacity: 0.75; 
+            max-height:100%;
+            transition: 1s;
+        }
+        90% {
+            opacity: 0.9; 
+            max-height:100%;
+            transition: 1s;
+        }
+        100% {
+            opacity: 1; 
+            max-height:auto;
+            transition: 1s;
+        }
+        
+    }
+
+    /* @keyframes rotate180{
+        0%{ transform: rotate(0deg);}
+        16.66% {transform: rotate(20deg) 1s;}
+        33%{ transform: rotate(40deg) 1s;}
+        50% {transform: rotate(100deg)1s;}
+        66%{ transform: rotate(140deg) 1s;}
+        92% {transform:rotate(160deg) 1s}
+        100%{ transform: rotate(180deg) 1s;}
+        } */
+
+}
+
+
 
 /* Særlig styling til desktop - minimum viewport bredde på 768 pixels */
 @media only screen and (min-width: 768px)
@@ -215,7 +378,27 @@ main>span img
         color: gainsboro;
     }
 
-    
+    .closeicon {display: none}
 
 }
+
+
+/*-------------------------*/
+/*-------------------------*/
+/*------- ERROR start------*/
+/*-------------------------*/
+/*-------------------------*/
+
+
+/* pilen pejer ikke op */
+main > span {
+    transform: rotate(180deg)
+}
+
+
+/*-------------------------*/
+/*-------------------------*/
+/*------- ERROR end--------*/
+/*-------------------------*/
+/*-------------------------*/
 
