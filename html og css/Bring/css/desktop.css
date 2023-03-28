@@ -1,0 +1,13 @@
+/*----------------*/
+/*--grid classes--*/
+/*----------------*/
+
+.grid-two-columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.grid-three-columns {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
