@@ -1,0 +1,62 @@
+:root {
+    --hue: 210;
+    --main-color: hsl(var(--hue), 51%, 20%);
+    --secondary-color: hsl(var(--hue), 29%, 80%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: grid;
+    font-family: sans-serif;
+    grid-template-rows: auto 1fr auto;
+}
+header, footer {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+header .container > span {
+    font-size: large;
+}
+
+main {
+    display: grid;
+    place-content: center;
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    padding: 1.5rem;
+}
+
+footer {
+    font-size: x-small;
+}
+
+img {
+    max-width: 100%;
+}
+
+.card {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-text {
+    text-align: center;
+    font-weight: 600;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.grid {
+    display: grid;
+}

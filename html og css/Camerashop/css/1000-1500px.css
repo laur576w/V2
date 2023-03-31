@@ -1,0 +1,16 @@
+.card-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 30%;
+}
+
+.card {
+    position: relative;
+}
+.card-text {
+    position: absolute;
+    bottom: 10%;
+    background-color: hsl(0, 0%, 100%, .6);
+    width: calc(100% - 20px);
+    padding: 5px 10px;
+    color: var(--main-color);
+}

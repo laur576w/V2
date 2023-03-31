@@ -1,0 +1,44 @@
+.card-container {
+    gap: 30px 5%;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card img {
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0 85%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0 85%);
+}
+
+
+/*------------------------------------------------------*/
+/* puha Hanne det ligner jo ikke en pil det du vil have */
+/*----------- så tag endelig denne i stedet ------------*/
+/*------------------------------------------------------*/
+.card:first-child img:hover {
+    /* downwarrds arrow clip-path*/
+    -webkit-clip-path: polygon(75% 0, 75% 60%, 100% 60%, 50% 100%, 0 60%, 25% 60%, 25% 0);
+    clip-path: polygon(75% 0, 75% 60%, 100% 60%, 50% 100%, 0 60%, 25% 60%, 25% 0);
+}
+
+.card:nth-child(2) img:hover {
+    /*circle clip-path*/
+    -webkit-clip-path: circle(40% at 50% 50%);
+    clip-path: circle(40% at 50% 50%);
+}
+
+.card:nth-child(3) img:hover {
+    /*rectangle clip-path*/
+    -webkit-clip-path: inset(10% 10% 20% 5%);
+    clip-path: inset(10% 10% 20% 5%);
+}
+
+.card:nth-child(4) img:hover {
+    /*towards right chevron clip-path*/
+    -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+.card img:hover, 
+.card img:hover ~ .card-text {
+    opacity: .7;
+}
+
