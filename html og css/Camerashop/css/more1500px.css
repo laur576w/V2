@@ -40,5 +40,6 @@
 .card img:hover, 
 .card img:hover ~ .card-text {
     opacity: .7;
+    cursor: pointer;
 }
 
