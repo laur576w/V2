@@ -4,11 +4,17 @@
 {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body
 {
     font-family: 'Roboto', sans-serif;   
+    overflow-x: hidden;
 }
 
 main section
@@ -21,10 +27,14 @@ main section article img
     width: 100%;
 }
 
+main > div:first-child {
+    background-color: darkslategray;
+}
+
 h1
 {
     height: 100px;
-    background-color: darkslategray;
+    /* background-color: darkslategray; */
     color: whitesmoke;
     font-size: 3rem;
     letter-spacing: 0.3rem;
@@ -33,6 +43,7 @@ h1
     align-items: center;
     text-transform: uppercase;
     text-shadow: -2px -2px silver;
+    animation: h1-rotate-slide-entry 2s;
 }
 
 p
@@ -54,6 +65,8 @@ nav ul
     list-style-type: none;
     text-transform: uppercase;
     font-size: 24px;
+    min-height: 50px;
+    /* animation: dropdown 0.3s; */
 }
 
 nav ul li h2
@@ -119,19 +132,29 @@ main>span
     right: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;        
+    align-items: center;      
+}
+
+main>span:hover img {
+    transform: scale(1.2);
 }
 
 /* Styling af selve til-top pil billedet */
 main>span img
 {
     width: 30px;
+    transition: transform .5s;  
+
 }
 
 /* mobile undermenu */
 @media only screen and (max-width: 767px) {
     nav a {
         color: gainsboro;
+    }
+
+    nav ul {
+        animation: nav-slide-in .5s;
     }
 
     .closeicon {
@@ -168,7 +191,7 @@ main>span img
         display: flex;
         flex-direction: column;
         position: relative;
-        animation: dropdown 0.3s;
+        /* animation: dropdown 0.3s; */
     }
 
     nav .menu-btn:checked ~ ul > li:first-child {
@@ -189,7 +212,7 @@ main>span img
     nav .menu-btn:checked ~ul li .submenu-btn:checked ~ ul {
         display: block;
         background-color: #5f5f5f;
-        animation: dropdown 0.5s;
+        /* animation: dropdown 0.5s; */
 
     }
 
@@ -233,59 +256,7 @@ main>span img
 
     }
 
-    @keyframes dropdown {
-        0% {
-            opacity: 0; 
-            max-height:0;
-            transition: 1s;
-        }
-        15% {
-            opacity: 0.15; 
-            max-height:30%;
-            transition: 1s;
-        }
-        30% {
-            opacity: 0.3; 
-            max-height:50%;
-            transition: 1s;
-        }
-        45% {
-            opacity: 0.45; 
-            max-height:80%;
-            transition: 1s;
-        }
-        60% {
-            opacity: 0.60; 
-            max-height:100%;
-            transition: 1s;
-        }
-        75% {
-            opacity: 0.75; 
-            max-height:100%;
-            transition: 1s;
-        }
-        90% {
-            opacity: 0.9; 
-            max-height:100%;
-            transition: 1s;
-        }
-        100% {
-            opacity: 1; 
-            max-height:auto;
-            transition: 1s;
-        }
-        
-    }
-
-    /* @keyframes rotate180{
-        0%{ transform: rotate(0deg);}
-        16.66% {transform: rotate(20deg) 1s;}
-        33%{ transform: rotate(40deg) 1s;}
-        50% {transform: rotate(100deg)1s;}
-        66%{ transform: rotate(140deg) 1s;}
-        92% {transform:rotate(160deg) 1s}
-        100%{ transform: rotate(180deg) 1s;}
-        } */
+    
 
 }
 
@@ -311,6 +282,9 @@ main>span img
         display: flex;
         justify-content: space-evenly;
         height: auto;   
+        /* animation: dropdown-desktop .5s ease-in-out; */
+        position: absolute;
+        transition: opacity .5s;
     }
 
     nav ul li
@@ -402,3 +376,52 @@ main > span {
 /*-------------------------*/
 /*-------------------------*/
 
+
+
+@keyframes dropdown-desktop {
+    0% {
+        opacity: 0; 
+        transform: translateY(-100%);
+        transition: 1s;
+    }
+    90% {
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 1; 
+        transition: 1s;
+    }
+    
+}
+
+
+@keyframes nav-slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    70% {
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes h1-rotate-slide-entry {
+    from {
+        transform: translateX(100%) rotateY(360deg);
+    }
+    to {
+        transform: translateX(0%) rotateY(0deg);
+    }
+}
+
+/* @keyframes rotate180{
+    0%{ transform: rotate(0deg);}
+    16.66% {transform: rotate(20deg) 1s;}
+    33%{ transform: rotate(40deg) 1s;}
+    50% {transform: rotate(100deg)1s;}
+    66%{ transform: rotate(140deg) 1s;}
+    92% {transform:rotate(160deg) 1s}
+    100%{ transform: rotate(180deg) 1s;}
+    } */
