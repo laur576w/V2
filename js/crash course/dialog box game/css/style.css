@@ -21,6 +21,8 @@ body{
     line-height: 1.2; 
     padding:  1 rem; 
     border-radius: 30px;
+    min-height: 100px;
+    min-width: 200px;
 }
 button{ 
     background: midnightblue;    
