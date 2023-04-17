@@ -19,6 +19,10 @@
             min-height: 100vh;
             min-height: 100dvh;
         }
+        body > div {
+            flex-grow: 1;
+            border-radius: 40px;
+        }
         div {
             display: flex;
             flex-direction: column;
@@ -37,35 +41,33 @@
         h1, h2, h3 {
             text-align: center;
         }
-        button {
-            margin: auto;
-        }
+        
     </style>
 </head>
 <body>
     <div id="mision1">
-        <h2 id="m1text"></h2>
+        <p id="m1text"></p>
         <button id="btn-1">Højeste tal af to tal</button>
     </div>
     <div id="mision2">
-        <h2 id="m2text"></h2>
+        <p id="m2text"></p>
         <button id="btn-2">Højeste tal af tre tal</button>
     </div>
     <div id="mision3">
         <p id="m3text"></p>
-        <button id="btn-3">ulige eller lige tal</button>
+        <button id="btn-3">Ulige eller lige tal</button>
     </div>
     <div id="mision4">
         <p id="m4text"></p>
-        <button id="btn-4"></button>
+        <button id="btn-4">Karakter</button>
     </div>
     <div id="mision5">
         <p id="m5text"></p>
-        <button id="btn-5"></button>
+        <button id="btn-5">gange, kvadrat, potens</button>
     </div>
     <div id="mision6">
         <p id="m6text"></p>
-        <button id="btn-6"></button>
+        <button id="btn-6">aktuel måned & årstid</button>
     </div>
 
     <script src="js/conditions.js" defer>
