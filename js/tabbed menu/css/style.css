@@ -6,9 +6,9 @@ body {
     --bgc-nav-HALA:    hsl(34, 90%, 60%);
     --bgc-inactive-tab-HALA: hsl(34, 60%, 45%);
     --bgc-active-show-HALA: hsl(34, 72%, 50%);
-    /* whatI feel the color should be with what colors given with one change*/
-    --bgc-inactive-tab: hsl(34deg 85% 40%);
-    --bgc-nav: hsl(34deg 72% 50%);
+    /* whatI feel the color should be with what colors given with some changes*/
+    --bgc-inactive-tab: hsl(34deg 75% 50%);
+    --bgc-nav: hsl(34deg 85% 40%);
     --bgc-active-show: hsl(34 90% 60%);
 }
 nav {
