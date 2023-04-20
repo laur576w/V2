@@ -3,9 +3,18 @@ body {
     padding: 0;
     min-height: 100vh;
     min-height: 100dvh;
+    --bgc-nav-HALA:    hsl(34, 90%, 60%);
+    --bgc-inactive-tab-HALA: hsl(34, 60%, 45%);
+    --bgc-active-show-HALA: hsl(34, 72%, 50%);
+    /* whatI feel the color should be with what colors given with one change*/
+    --bgc-inactive-tab: hsl(34deg 85% 40%);
+    --bgc-nav: hsl(34deg 72% 50%);
+    --bgc-active-show: hsl(34 90% 60%);
 }
 nav {
-    background-color: hsl(34, 90%, 60%);
+    /* background-color: var(--bgc-active-show-HALA); */
+    /* background-color: var(--bgc-nav-HALA); */
+    background-color: var(--bgc-nav);
 }
 
 nav ul {
@@ -17,7 +26,8 @@ nav ul {
 }
 
 nav ul li {
-  background-color:   hsl(34, 60%, 45%);
+  /* background-color:   var(--bgc-inactive-tab-HALA); */
+  background-color:   var(--bgc-inactive-tab);
   cursor: pointer;
   padding: 1rem 2rem;
 }
@@ -37,7 +47,9 @@ nav ul li:first-child {
 }
 
 .active, .show {
-    background-color: hsl(34, 72%, 50%);
+    /* background-color: var(--bgc-nav-HALA); */
+    /* background-color: var(--bgc-active-show-HALA); */
+    background-color: var(--bgc-active-show);
     
 }
 
