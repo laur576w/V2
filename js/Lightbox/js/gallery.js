@@ -1,3 +1,6 @@
+//--------------------------------------------------------
+//- NOT OPTIMIZED JUST DID WHAT THE TASK WANTED US TO DO--
+//--------------------------------------------------------
 const gallery = document.getElementById("gallery")
 gallery.addEventListener('click', overlay)
 
