@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkslategrey;
+}
+
+img {
+    max-width: 100%;
+}
+
+.site-wrapper {
+    max-width: 80vw;
+    margin-inline: auto;
+}
+
+
+/* header styling */
+.bg-header-container {
+    background: url('../img/2010-hus-i-træ.jpg') 50% 30% no-repeat;
+    /* background-size: cover; */
+    min-height: 350px;
+}
+
+
+.navbar-container {
+display: flex;
+padding: 20px;
+background-color: black;
+color: white;
+justify-content: space-between;
+}
+
+/* nav */
+nav {
+    text-transform: capitalize;
+    
+}
+nav li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+/* article */
+article{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+}
+
+article h2{
+    width: 100%;
+    text-align: center;
+}
+
+.left, .right{
+    flex: 1;
+    padding: 20px;
+} 
+
+/* Card */
+.cards{
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 2.5rem .75rem;
+}
+
+.card {
+    background-color: white;
+    width: 30%;
+}
+
+.card-img {
+    width: 100%;
+    aspect-ratio: 3/2;
+}
+
+.card-info{
+    padding: 0.5rem;
+    padding-bottom: 2rem;
+}
+
+.card-meters {
+    margin-bottom: 1rem;
+}
+
+.card-title, .card-price {
+    text-transform: capitalize;
+}
+
+
+/* bg-container section */
+section.bg-container {
+background-image: url('.././img/5642_Hejrelunden_\(20\).jpg');
+background-position: 15% 50%;
+min-height: 450px;
+position: relative;
+}
+
+section.bg-container button {
+    display: block;
+    padding: .5rem;
+    color: white;
+    font-size: 150%;
+    background-color: transparent;
+    border-color: white;
+    border-radius: 99999999999px;
+    box-shadow: none;
+    position: absolute;
+    left: 50%;
+    top:60%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+/*--------*/
+/* footer */
+/*--------*/
+
+footer {
+    background-color: rgb(53, 51, 48);
+    color: grey;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 2rem 5rem;
+}
+
+footer .social {
+    width: 100%;
+    text-align: right;
+    font-size: 150%;
+}
+
+footer .column {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+footer a {
+    color: inherit;
+}
+
+footer a::before {
+    content: '- ';
+}
+
+footer .column {
+    flex: 1;
+}
